@@ -13,7 +13,6 @@ int main() {
 	// 샘플 경로 설정
 	const char * SImagePATH = "TestImage/ShapeImage/";
 	const char * NImagePATH = "TestImage/NumberImage/"; 
-	//test
 	// InputSample함수를 이용하여 해당 경로의 모든 파일을 읽어와 배열에 저장
 	CARD::InputSample(ShapeArray, SImagePATH, 4);
 	CARD::InputSample(NumberArray, NImagePATH, 13);
