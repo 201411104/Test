@@ -17,7 +17,7 @@ void CARD::InputSample(Mat Array[], const char * PATH, int size){
 	for (int i = 0 ; i < size ; i++) {
 		string NewPATH = format("%s%s", PATH, &c_file.name);
 		Array[i] = imread(NewPATH, IMREAD_GRAYSCALE);
-		cout << "Array["<<i<<"] = "<<NewPATH << endl;
+		//cout << "Array["<<i<<"] = "<<NewPATH << endl;
 		if (_findnext(hFile, &c_file) == -1)break;
 	}
 	_findclose(hFile);
@@ -78,7 +78,7 @@ void CARD::MatchImage(Mat srcImage, Mat dstImage, Mat Array[], int & Case, int s
 	}
 	rectangle(dstImage, Loc,
 		Point(Loc.x + Array[Case].cols, Loc.y + Array[Case].rows), Scalar(0, 0, 255), 2);
-	cout << Case << endl;
+	//cout << Case << endl;
 }
 //matchtemplate함수를 이용해 입력 이미지를 배열 내의 샘플 이미지와 비교해 가장 비슷한 이미지를 찾고
 //그 이미지의 크기에 맞는 빨간색 사각형 합성, 배열 주소값을 case 변수에 저장
